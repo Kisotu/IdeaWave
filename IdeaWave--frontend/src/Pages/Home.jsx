@@ -2,7 +2,9 @@
 
 export const Home = () => {
   return (
-	<div>Home Page</div>
+	<>
+  <p>This is the landing page</p>
+  </>
   )
 }
 export default Home
