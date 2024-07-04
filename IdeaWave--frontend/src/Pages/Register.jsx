@@ -1,5 +1,5 @@
-import logo from "../../assets/img/logo.png"
-import "../../assets/css/style.css"
+import logo from "../assets/img/logo.png"
+import "../assets/css/style.css"
 
 const Register = () => {
 	return (
