@@ -1,10 +1,10 @@
 
+
 export const Home = () => {
   return (
-	<>
-  <nav></nav>
-  home
-  </>
+    <>
+      Home
+    </>
   )
 }
 export default Home
