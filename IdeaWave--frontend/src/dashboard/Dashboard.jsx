@@ -1,7 +1,13 @@
 
+import Header from "./components/Header"
+import Main from "./components/Main"
+
 const Dashboard = () => {
   return (
-	<>Dashboard</>
+    <div className="container-scroller">
+      <Header />
+      <Main />
+    </div>
   )
 }
 
