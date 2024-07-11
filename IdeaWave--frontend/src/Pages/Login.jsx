@@ -1,4 +1,5 @@
 import "../assets/css/login.css"
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -21,7 +22,7 @@ const Login = () => {
                 placeholder="Password"
                 id="password"
               />
-              <button>Login</button>
+              <Link to={"/dashboard"}><button>Login</button></Link>
             </form>
           </div>
           {/* <div className="card_terms">
