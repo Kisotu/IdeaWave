@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import logo from "../../assets/img/logo.png"
+import { Link } from "react-router-dom";
 
-import { BsFillBarChartLineFill, BsLightbulb } from "react-icons/bs"
+import { BsLightbulb } from "react-icons/bs"
 import { MdDashboardCustomize } from "react-icons/md";
 
 const Sidebar = ({openSidebarToggle, OpenSidebar}) => {
@@ -16,20 +17,21 @@ const Sidebar = ({openSidebarToggle, OpenSidebar}) => {
 			</div>
 
 			<ul className="sidebar-list">
+				{/* sidebar routes */}
 				<li className="sidebar-list-item">
-					<a href="">
+					<Link to={"/dashboard"}>
 						<MdDashboardCustomize className="icon" />Dashboard
-					</a>
+					</Link>
 				</li>
-				<li className="sidebar-list-item">
-					<a href="">
+				{/* <li className="sidebar-list-item">
+					<Link to={"/dashboard/insights"}>
 						<BsFillBarChartLineFill className="icon" />Insights
-					</a>
-				</li>
+					</Link>
+				</li> */}
 				<li className="sidebar-list-item">
-					<a href="">
+					<Link to={"/dashboard/generate"}>
 						<BsLightbulb className="icon" />Idea-Gen
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</aside>
