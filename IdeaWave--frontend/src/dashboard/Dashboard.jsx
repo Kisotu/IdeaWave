@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../dashboard/dashboard.css"
 import Header from "./components/Header"
-import Main from "./components/Main"
+import Layout from "./components/Layout"
 import Sidebar from "./components/Sidebar"
 
 
@@ -16,7 +16,7 @@ const Dashboard = () => {
     <div className="grid-container">
       <Header OpenSidebar={OpenSidebar}/>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-      <Main />
+      <Layout />
     </div>
   )
 }
