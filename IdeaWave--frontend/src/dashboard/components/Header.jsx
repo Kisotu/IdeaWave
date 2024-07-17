@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
-import { Bs1CircleFill, BsJustify  } from "react-icons/bs"
-import { Fa4 } from "react-icons/fa6"
+import { Link } from "react-router-dom"
+import { BsJustify  } from "react-icons/bs"
 import { TbLogout2 } from "react-icons/tb";
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 
 
 export const Header = ({OpenSidebar}) => {
@@ -13,12 +13,10 @@ export const Header = ({OpenSidebar}) => {
 				<BsJustify  className="icon" onClick={OpenSidebar}/>
 			</div>
 			<div className="header-left">
-				<FaSearch className="icon"/>
+				<h3>Dashboard</h3>
 			</div>
 			<div className="header-right">
-				<Bs1CircleFill className="icon"/>
-				<Fa4 className="icon" />
-				<TbLogout2 className="icon" />
+				<Link to={"/"}><TbLogout2 className="icon" />logout</Link>
 			</div>
 		</div>
   )
