@@ -27,10 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 	'localhost',
-	'http://localhost:3000',
+	'http://localhost:5173',
 	'https://idea-wave-kisotus-projects.vercel.app/',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -42,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'trends',
-	'corsheaders',
+	'corsheaders'
 ]
 
 MIDDLEWARE = [
