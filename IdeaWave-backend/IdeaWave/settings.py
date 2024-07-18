@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-##9x+=53ggdn3ioeao+ntez4%i2)#ay%omr*a^y@62ey53&72c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'localhost',
+	'http://localhost:3000',
+	'https://idea-wave-kisotus-projects.vercel.app/',
+]
 
 
 # Application definition
@@ -37,9 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'trends',
+	'corsheaders',
 ]
 
 MIDDLEWARE = [
+	'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
