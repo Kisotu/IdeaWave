@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import AreaChart from "../charts/AreaChart"
 import PieChart from "../charts/PieChart";
 
@@ -5,6 +6,14 @@ import { BiUser, BiDollar } from "react-icons/bi"
 import { PiTrendUp } from "react-icons/pi";
 
 const Content = () => {
+	const [trends, setTrends] = useState([]);
+
+	useEffect(() => {
+		const storedTrends = localStorage.getItem('trends');
+		if (storedTrends) {
+			setTrends(JSON.parse(storedTrends));
+		}
+	}, []);
 	return (
 		<>
 			<div className="main-cards">
@@ -52,10 +61,10 @@ const Content = () => {
 
 			<div className="list_card">
 				<h3 className="list_title">Todays Trends</h3>
-				<ol>
-					<li>Messi</li>
-					<li>Euros2024</li>
-					<li>Trump assasination</li>
+				<ol className="list">
+					{trends.map((trend, index) => (
+						<li key={index}>{trend}</li>
+					))}
 				</ol>
 			</div>
 
