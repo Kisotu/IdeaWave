@@ -5,7 +5,7 @@ import time
 
 # Rate limit control
 LAST_REQUEST_TIME = None
-REQUEST_INTERVAL = 60  # in seconds
+REQUEST_INTERVAL = 1  # in seconds
 
 def get_google_trends(request):
     global LAST_REQUEST_TIME
